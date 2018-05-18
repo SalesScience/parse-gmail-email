@@ -90,7 +90,7 @@ module.exports = function(data, cb) {
           });
         }
         else if (item.mimeType === 'text/plain') {
-          email.message = String(new Buffer(item.body.data, 'base64'));
+          email.text = String(new Buffer(item.body.data, 'base64'));
         }
         else if (item.mimeType === 'text/html') {
           email.message = String(new Buffer(item.body.data, 'base64'));
